@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-ENV SECRET=0x010203
+ENV SECRET=xxxxxx
 
 RUN apk add --no-cache bash aria2
 
