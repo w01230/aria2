@@ -1,4 +1,4 @@
-# aria2:
+# aria2
 Aria2 is a downloading tools.It can be used for downloading http/ftp/bt/magnet. And it does not include a webui.
 
 ## usage:
