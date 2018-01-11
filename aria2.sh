@@ -4,6 +4,6 @@ sudo docker run -d \
 		--restart=always \
 		--name=aria2 \
 		-p 6800:6800 \
-		-e "SECRET=xxxxxx" \
-		-v /home/jome/download:/data \
-		aria2
+		-e "SECRET=secret" \
+		-v /nas/download/TDDOWNLOAD:/data \
+		aria2:1.0
