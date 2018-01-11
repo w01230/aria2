@@ -10,6 +10,8 @@ sudo docker run -d --name=aria2 -p 6800:6800 -e "SECRET=xxxxxx" -v /nas/TDDOWNLO
 Replace "/nas/TDDOWNLOAD" with you own download path.<br>
 Replace "xxxxxx" with you onw rpc-secret token.<br>
 
+## webui
+[ariang](http://ariang.mayswind.net/latest/#!/downloading)<br>
 
 ## more:
 [Tracker list](https://github.com/ngosang/trackerslist/raw/master/trackers_all.txt)<br>
