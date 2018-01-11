@@ -5,5 +5,5 @@ sudo docker run -d \
 		--name=aria2 \
 		-p 6800:6800 \
 		-e "SECRET=xxxxxx" \
-		-v /nas/download:/data \
+		-v /home/jome/download:/data \
 		aria2
