@@ -10,5 +10,5 @@ COPY monitor.sh /usr/bin/
 VOLUME /data
 EXPOSE 6800
 
-ENTRYPOINT [ "/usr/bin/monitor.sh" ]
+ENTRYPOINT [ "monitor.sh" ]
 
