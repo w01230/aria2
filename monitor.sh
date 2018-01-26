@@ -1,6 +1,6 @@
 #!/bin/bash
 
-config=/etc/aria2.conf
+config=/etc/aria2/aria2.conf
 list=`wget -qO-  https://github.com/ngosang/trackerslist/raw/master/trackers_all.txt|awk NF|sed ":a;N;s/\n/,/g;ta"`
 
 if [ -z `grep "bt-tracker" ${config}` ]; then
@@ -23,7 +23,7 @@ while true;
 do
     pid=`ps -ef|grep aria2c|grep -v grep|awk '{print $2}'`
     if [ -z "$pid" ]; then
-        /usr/bin/aria2c --conf-path=/etc/aria2.conf
+        /usr/bin/aria2c --conf-path=${config}
 	echo "start aria2c done."
     else
         sleep 30
