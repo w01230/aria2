@@ -22,7 +22,7 @@ USER $USER
 
 VOLUME /data
 EXPOSE 6800
-EXPOSE 6881/udptcp
+EXPOSE 6881
 
 ENTRYPOINT [ "monitor.sh" ]
 
