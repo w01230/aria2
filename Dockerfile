@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-ENV HOME /etc/aria2/ 
+ENV HOME /etc/aria2 
 ENV SECRET=aria2
 
 ARG USER=aria2
@@ -8,7 +8,7 @@ ARG UID=1000
 ARG GROUP=$USER
 ARG GID=$UID
 
-COPY aria2 $HOME
+COPY aria2 $HOME/
 COPY monitor.sh /usr/bin/ 
 
 RUN apk add --no-cache bash aria2 && \
