@@ -9,13 +9,13 @@ ARG GROUP=$USER
 ARG GID=$UID
 
 COPY aria2 $HOME/
-COPY monitor.sh /usr/bin/ 
+COPY exec.sh /usr/bin/ 
 
 RUN apk add --no-cache bash aria2 && \
 	addgroup -S -g $GID $GROUP && \
 	adduser -S -G $GROUP -u $UID $USER && \
 	chown $USER:$GROUP /usr/bin/aria2c && \
-	chown $USER:$GROUP /usr/bin/monitor.sh && \
+	chown $USER:$GROUP /usr/bin/exec.sh && \
 	chown -R $USER:$GROUP $HOME 
 
 USER $USER
@@ -26,5 +26,5 @@ EXPOSE 6882/tcp
 EXPOSE 6882/udp
 
 
-ENTRYPOINT [ "monitor.sh" ]
+ENTRYPOINT [ "exec.sh" ]
 
