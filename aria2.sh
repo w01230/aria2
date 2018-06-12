@@ -6,5 +6,5 @@ docker run -d \
 	-p 6800:6800 \
 	-p 6882:6882 \
 	-e "SECRET=0x000000" \
-	-v /nas/downloads:/data \
+	-v /nas/downloads/downloads:/data \
 	aria2

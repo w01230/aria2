@@ -12,7 +12,6 @@ COPY aria2 $HOME/
 COPY exec.sh /usr/bin/ 
 
 RUN apk add --no-cache bash aria2 && \
-	addgroup -S -g $GID $GROUP && \
 	adduser -S -G $GROUP -u $UID $USER && \
 	chown $USER:$GROUP /usr/bin/aria2c && \
 	chown $USER:$GROUP /usr/bin/exec.sh && \
