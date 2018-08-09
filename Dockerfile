@@ -6,7 +6,6 @@ ENV SECRET=aria2
 ARG USER=aria2
 ARG UID=1000
 ARG GROUP=$USER
-ARG GID=$UID
 
 COPY aria2 $HOME/
 COPY exec.sh /usr/bin/ 
@@ -21,8 +20,6 @@ USER $USER
 
 VOLUME /data
 EXPOSE 6800
-EXPOSE 6882/tcp
-EXPOSE 6882/udp
 
 
 ENTRYPOINT [ "exec.sh" ]
