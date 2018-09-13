@@ -11,7 +11,7 @@ COPY exec.sh /usr/bin/
 
 RUN apk add --no-cache sudo bash aria2 shadow && \
 	groupadd -g $GID aria2 && \
-	adduser -S -G aria2 -u $UID aria2 
+	useradd -r -M -U -u $UID aria2 
 
 VOLUME /data
 EXPOSE 6800
