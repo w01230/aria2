@@ -9,11 +9,13 @@ ENV GID=1000
 COPY aria2 $HOME/
 COPY exec.sh /usr/bin/ 
 
+VOLUME /data
+
 RUN apk add --no-cache sudo bash aria2 shadow && \
 	groupadd -g $GID aria2 && \
-	useradd -r -M -U -u $UID aria2 
+	adduser -S -G aria2 -u $UID aria2 && \
+	chown aria2:aria2 /data
 
-VOLUME /data
 EXPOSE 6800
 
 ENTRYPOINT [ "exec.sh" ]

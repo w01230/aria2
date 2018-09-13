@@ -7,5 +7,5 @@ docker run -d \
 	-e "SECRET=0x0000" \
 	-e "UID=1000" \
 	-e "GID=985" \
-	-v /mnt:/data \
+	-v /nas/downloads/downloads:/data \
 	aria2
