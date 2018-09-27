@@ -2,10 +2,9 @@
 Aria2 is a downloading tool.It can be used for downloading http/ftp/bt/magnet. And this docker image does not include a webui.
 
 ## usage:
-### It does not support rpc-secure.
 ### run:
 ```bash
-sudo docker run -d --name=aria2 -p 6800:6800 -e "SECRET=xxxxxx" -v /nas/TDDOWNLOAD:/data aria2:latest
+sudo docker run -d --name=aria2 -p 6800:6800 -e "SECRET=xxxxxx" -e "UID=1000" -e "GID=1000" -v /nas/TDDOWNLOAD:/data aria2:latest
 ```
 Replace "/nas/TDDOWNLOAD" with you own download path.<br>
 Replace "xxxxxx" with you onw rpc-secret token.<br>
