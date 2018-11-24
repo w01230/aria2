@@ -6,7 +6,8 @@ ENV SECRET=aria2
 ENV UID=1000
 ENV GID=1000
 
-COPY aria2 $HOME/
+COPY aria2/aria2.conf /etc/aria2/
+COPY aria2/aria2.session /home/aria2/
 COPY exec.sh /usr/bin/ 
 
 VOLUME /data
