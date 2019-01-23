@@ -2,6 +2,9 @@
 
 groupmod -g $GID aria2
 usermod -u $UID -g $GID aria2
+chown aria2:aria2 /data
+chown aria2:aria2 /etc/aria2/aria2.conf
+chown aria2:aria2 /etc/aria2/aria2.session
 
 config=/etc/aria2/aria2.conf
 list=`wget -qO-  https://github.com/ngosang/trackerslist/raw/master/trackers_all.txt|awk NF|sed ":a;N;s/\n/,/g;ta"`
