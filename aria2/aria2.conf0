@@ -1,0 +1,13 @@
+continue
+daemon=true
+dir=/download
+file-allocation=falloc
+log-level=warn
+disable-ipv6=true
+log-level=warn
+min-split-size=5M
+rpc-listen-all=true
+rpc-allow-origin-all=true
+rpc-listen-all=true
+enable-rpc=true
+ca-certificate=/etc/ssl/cert.pem
